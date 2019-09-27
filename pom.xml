@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  @author 13
-      @qq交流群 796794009
-      @email 2449207463@qq.com
-      @link http://13blog.site -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -18,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -26,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <commonmark.version>0.13.0</commonmark.version>
     </properties>
 
     <dependencies>
@@ -44,7 +41,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.3.2</version>
+            <version>2.1.0</version>
         </dependency>
         <!-- 验证码 -->
         <dependency>
@@ -52,17 +49,19 @@
             <artifactId>kaptcha</artifactId>
             <version>2.3.2</version>
         </dependency>
-        <!-- commonmark core -->
+
+        <!-- markdown 文档支持 工具库 commonmark-java -->
+        <!-- commonmark core markdown 核心组件 -->
         <dependency>
             <groupId>com.atlassian.commonmark</groupId>
             <artifactId>commonmark</artifactId>
-            <version>0.8.0</version>
+            <version>${commonmark.version}</version>
         </dependency>
-        <!-- commonmark table -->
+        <!-- commonmark table markdown 表格支持-->
         <dependency>
             <groupId>com.atlassian.commonmark</groupId>
             <artifactId>commonmark-ext-gfm-tables</artifactId>
-            <version>0.8.0</version>
+            <version>${commonmark.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -84,9 +83,4 @@
             </plugin>
         </plugins>
     </build>
-    <!--  @author 13
-          @qq交流群 796794009
-          @email 2449207463@qq.com
-          @link http://13blog.site
-    -->
 </project>
